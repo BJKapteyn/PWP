@@ -1,25 +1,28 @@
 let slideButtons = {
     left: document.getElementById('leftButton'),
-    right: document.getElementById('rightButton')
+    right: document.getElementById('rightButton'),
 }
-debugger;
-//contains elements and views with incrementing function
-let carouselUtilities = new {
+
+let carouselElements = {
     carousel: document.getElementById('carousel'),
     carouselShowing: document.getElementById('carouselShowing'),
     carouselView1: document.getElementById('carouselShow1'),
     carouselView2: document.getElementById('carouselShow2'),
     carouselView3: document.getElementById('carouselShow3'),
     carouselView4: document.getElementById('carouselShow4'),
-    carouselView5: document.getElementById('carouselShow5'),
+    carouselView5: document.getElementById('carouselShow5')
+}
+
+//contains elements and views with incrementing function
+let carouselUtilities = {
     //
-    carouselViews: [this.carouselView1, this.carouselView2, this.carouselView3, this.carouselView4, this.carouselView5],
+    carouselViews: [carouselElements.carouselView1, carouselElements.carouselView2, carouselElements.carouselView3, carouselElements.carouselView4, carouselElements.carouselView5],
     currentViewIndex: 0,
-    leftViewIndex: this.carouselViews.length - 1,
+    leftViewIndex: 0,//this is initialized onload
     rightViewIndex: 1,
     changeIndex: function(upOrDown = true, index = 0) {
         if(upOrDown) {
-            if(index == this.carouselViews.length - 1) {
+            if(index == carouselElements.carouselViews.length - 1) {
                 return 0;
             }
             else {
@@ -28,7 +31,7 @@ let carouselUtilities = new {
         }
         else {
             if(index == 0) {
-                return this.carouselViews.length;
+                return carouselElements.carouselViews.length;
             }
             else {
                 return index - 1;
@@ -36,32 +39,35 @@ let carouselUtilities = new {
         }
     },
     changeViewIndexes: function(upOrDown = true) {
-        this.currentViewIndex = this.changeIndex(upOrDown, this.currentViewIndex);
-        this.leftViewIndex = this.changeIndex(upOrDown, this.leftViewIndex);
-        this.rightViewIndex = this.changeIndex(upOrDown, this.rightViewIndex);
+        carouselElements.currentViewIndex = carouselElements.changeIndex(upOrDown, carouselElements.currentViewIndex);
+        carouselElements.leftViewIndex = carouselElements.changeIndex(upOrDown, carouselElements.leftViewIndex);
+        carouselElements.rightViewIndex = carouselElements.changeIndex(upOrDown, carouselElements.rightViewIndex);
     }
 }
 
 slideButtons.left.addEventListener('click', function(event) {
     event.preventDefault();
-    slideCarousel(true);
+    slideCarousel(false);
 })
 
 slideButtons.right.addEventListener('click', function(event) {
     event.preventDefault();
-    slideCarousel(false)
+    slideCarousel(true)
 })
 
 //true is slide right false is slide left
 function slideCarousel(leftOrRight) {
+    debugger;
     let currentView = carouselUtilities.carouselViews[carouselUtilities.currentViewIndex];
     if(leftOrRight) {
         let leftView = carouselUtilities.carouselViews[carouselUtilities.rightViewIndex];
         currentView.classList.add("right");
-        currentView.classList.remove("center");
+        setTimeout(function() {
+            currentView.classList.remove("center");
+
+        }, 1000)
     
     }
-    document.getElementById().classList.re
 
     //increment indexes
     carouselUtilities.changeViewIndexes(leftOrRight);
@@ -69,4 +75,8 @@ function slideCarousel(leftOrRight) {
 
 function slideLeft() {
     carouselUtilities.changeViewIndexes(false);
+}
+
+window.onload = function() {
+    carouselUtilities.leftViewIndex = carouselUtilities.carouselViews.length;
 }
