@@ -47,6 +47,13 @@ header h1, header h2 {
     top: 50%;
 }
 
+#leftButton {
+    left: 10px;
+}
+
+#rightButton {
+    right: 10px;
+}
 
 .noDisplay {
     display: none;
@@ -75,13 +82,6 @@ header h1, header h2 {
 
 /* -------------------------------------------------------------------------------------- */
  
-#leftButton {
-    left: 10px;
-}
-
-#rightButton {
-    right: 10px;
-}
 
 /* -------------------------------------Animations--------------------------------------- */
 

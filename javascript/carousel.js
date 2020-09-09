@@ -22,27 +22,26 @@ let carouselUtilities = {
     rightViewIndex: 1,
     changeIndex: function(upOrDown = true, index = 0) {
         if(upOrDown) {
-            if(index == carouselElements.carouselViews.length - 1) {
+            if(index == this.carouselViews.length - 1) {
                 return 0;
             }
             else {
-                return index + 1;
+                return (index + 1);
             }
         }
         else {
             if(index == 0) {
-                return carouselElements.carouselViews.length;
+                return this.carouselViews.length - 1;
             }
             else {
-                return index - 1;
+                return (index - 1);
             }
         }
     },
     changeViewIndexes: function(upOrDown = true) {
-        debugger;
-        carouselUtilities.currentViewIndex = carouselUtilities.changeIndex(upOrDown, carouselElements.currentViewIndex);
-        carouselUtilities.leftViewIndex = carouselUtilities.changeIndex(upOrDown, carouselElements.leftViewIndex);
-        carouselUtilities.rightViewIndex = carouselUtilities.changeIndex(upOrDown, carouselElements.rightViewIndex);
+        carouselUtilities.currentViewIndex = carouselUtilities.changeIndex(upOrDown, this.currentViewIndex);
+        carouselUtilities.leftViewIndex = carouselUtilities.changeIndex(upOrDown, this.leftViewIndex);
+        carouselUtilities.rightViewIndex = carouselUtilities.changeIndex(upOrDown, this.rightViewIndex);
     }
 }
 
@@ -64,18 +63,17 @@ function slideCarousel(leftOrRight) {
 
     if(leftOrRight) {
         debugger;
-        currentView.style.right = "-102%";
-        leftView.style.right = "102%";
-        leftView.style.display = "inline-block";
+        currentView.style.right = "102%";
+        leftView.style.right = "-102%";
+        leftView.classList.remove("noDisplay");
         leftView.style.right = "0%"
 
         setTimeout(function() {
-
+            currerntView.classList.add("noDisplay");
         }, 1000)
-    
     }
-
     //increment indexes
+
     carouselUtilities.changeViewIndexes(leftOrRight);
 }
 
@@ -84,5 +82,6 @@ function slideLeft() {
 }
 
 window.onload = function() {
+    debugger;
     carouselUtilities.leftViewIndex = carouselUtilities.carouselViews.length - 1;
 }
