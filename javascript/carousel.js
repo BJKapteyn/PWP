@@ -16,7 +16,7 @@ let carouselElements = {
 //contains elements and views with incrementing function
 let carouselUtilities = {
     //
-    carouselViews: [carouselElements.carouselView1, carouselElements.carouselView2, carouselElements.carouselView3, carouselElements.carouselView4, carouselElements.carouselView5],
+    carouselViews: document.querySelectorAll('.carouselView'),
     currentViewIndex: 0,
     leftViewIndex: 0,//this is initialized onload
     rightViewIndex: 1,
@@ -39,9 +39,10 @@ let carouselUtilities = {
         }
     },
     changeViewIndexes: function(upOrDown = true) {
-        carouselElements.currentViewIndex = carouselElements.changeIndex(upOrDown, carouselElements.currentViewIndex);
-        carouselElements.leftViewIndex = carouselElements.changeIndex(upOrDown, carouselElements.leftViewIndex);
-        carouselElements.rightViewIndex = carouselElements.changeIndex(upOrDown, carouselElements.rightViewIndex);
+        debugger;
+        carouselUtilities.currentViewIndex = carouselUtilities.changeIndex(upOrDown, carouselElements.currentViewIndex);
+        carouselUtilities.leftViewIndex = carouselUtilities.changeIndex(upOrDown, carouselElements.leftViewIndex);
+        carouselUtilities.rightViewIndex = carouselUtilities.changeIndex(upOrDown, carouselElements.rightViewIndex);
     }
 }
 
@@ -57,13 +58,18 @@ slideButtons.right.addEventListener('click', function(event) {
 
 //true is slide right false is slide left
 function slideCarousel(leftOrRight) {
-    debugger;
-    let currentView = carouselUtilities.carouselViews[carouselUtilities.currentViewIndex];
+    let currentView = carouselUtilities.carouselViews.item(carouselUtilities.currentViewIndex);
+    let leftView = carouselUtilities.carouselViews.item(carouselUtilities.leftViewIndex);
+    let rightView = carouselUtilities.carouselViews.item(carouselUtilities.rightViewIndex)
+
     if(leftOrRight) {
-        let leftView = carouselUtilities.carouselViews[carouselUtilities.rightViewIndex];
-        currentView.classList.add("right");
+        debugger;
+        currentView.style.right = "-102%";
+        leftView.style.right = "102%";
+        leftView.style.display = "inline-block";
+        leftView.style.right = "0%"
+
         setTimeout(function() {
-            currentView.classList.remove("center");
 
         }, 1000)
     
@@ -78,5 +84,5 @@ function slideLeft() {
 }
 
 window.onload = function() {
-    carouselUtilities.leftViewIndex = carouselUtilities.carouselViews.length;
+    carouselUtilities.leftViewIndex = carouselUtilities.carouselViews.length - 1;
 }

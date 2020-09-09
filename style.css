@@ -28,15 +28,16 @@ header h1, header h2 {
 }
 
 .carouselView {
+    right: 0%;
     height: 100%;
     position: absolute;
     width: 100%;
     display: inline-block;
-    transition: right ease-out;
-    -webkit-transition: right ease-out;
-    -moz-transition: right ease-out;
-    -ms-transition: right ease-out;
-    -o-transition: right ease-out;
+    transition: right ease-out 500ms;
+    -webkit-transition: right ease-out 500ms;
+    -moz-transition: right ease-out 500ms;
+    -ms-transition: right ease-out 500ms;
+    -o-transition: right ease-out 500ms;
 }
 
 .carouselButton {
@@ -46,21 +47,6 @@ header h1, header h2 {
     top: 50%;
 }
 
-.right, .left {
-    will-change: right;
-}
-
-.center {
-    right: 0%;
-}
-
-.right {
-    right: 105%;
-}
-
-.left {
-    right: 105%;
-}
 
 .noDisplay {
     display: none;
