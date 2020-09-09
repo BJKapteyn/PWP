@@ -24,8 +24,19 @@ header h1, header h2 {
 #carousel {
     width: 100%;
     height: 500px;
-    background: gray;
     position: relative;
+}
+
+.carouselView {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    display: inline-block;
+    transition: right ease-out;
+    -webkit-transition: right ease-out;
+    -moz-transition: right ease-out;
+    -ms-transition: right ease-out;
+    -o-transition: right ease-out;
 }
 
 .carouselButton {
@@ -35,6 +46,48 @@ header h1, header h2 {
     top: 50%;
 }
 
+.right, .left {
+    will-change: right;
+}
+
+.center {
+    right: 0%;
+}
+
+.right {
+    right: 105%;
+}
+
+.left {
+    right: 105%;
+}
+
+.noDisplay {
+    display: none;
+}
+
+ /* --------------------------------Test--------------------------------------------------- */
+#carouselShow1 {
+    background-color: green;
+}
+
+#carouselShow2 {
+    background-color: brown;
+}
+
+#carouselShow3 {
+    background-color: pink;
+}
+
+#carouselShow4 {
+    background-color: blue;
+}
+
+#carouselShow5 {
+    background-color: black;
+}
+
+/* -------------------------------------------------------------------------------------- */
  
 #leftButton {
     left: 10px;
@@ -43,3 +96,16 @@ header h1, header h2 {
 #rightButton {
     right: 10px;
 }
+
+/* -------------------------------------Animations--------------------------------------- */
+
+@keyframes slideRight {
+    from {right: 0%;}
+    to {right: -105%;}
+}
+
+@keyframes slideLeft{
+    from{right: 0%;}
+    to {right: 105%}
+}
+/* -------------------------------------------------------------------------------------- */
