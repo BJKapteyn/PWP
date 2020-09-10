@@ -12,10 +12,13 @@ body {
     font-family: "Arial Black", Gadget, sans-serif;
 }
 
+/* SVG Logo */
 #PWP {
     position: absolute;
-    top: 0;
+    top: 10px;
     left: 20px;
+    width: 150px;
+    height: 150px;
 }
 
 header {
@@ -26,9 +29,9 @@ header {
 }
 
 nav {
-    position: absolute;
-    right: 10px;
-    top: 10px;
+    position: fixed;
+    right: 20px;
+    top: 20px;
 }
 
 header h1 {
@@ -45,6 +48,29 @@ header h1, header h2 {
 }
 
 /*----------------------------------Nav-------------------------------------------------------*/
+
+a.navButton {
+    font-size: 20px;
+    padding: 10px;
+    will-change: text-shadow, color;
+    color: rgb(51, 65, 149);
+    text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.5);
+    transition: color 500ms ease-out, text-shadow 500ms ease-out;
+    -webkit-transition: color 500ms ease-out, text-shadow 500ms ease-out;
+    -moz-transition: color 500ms ease-out, text-shadow 500ms ease-out;
+    -ms-transition: color 500ms ease-out, text-shadow 500ms ease-out;
+    -o-transition: color 500ms ease-out, text-shadow 500ms ease-out;
+}
+
+.navButton, .navButton:hover, .navButton:active, .navButton:visited {
+    text-decoration: none;
+}
+
+.navButton:hover {
+    color: white;
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+}
+
 /*----------------------------------Carousel--------------------------------------------------*/
 
 #carousel {
@@ -131,5 +157,16 @@ header h1, header h2 {
 @keyframes slideLeft{
     from{right: 0%;}
     to {right: 105%}
+}
+
+@keyframes fadeNavButtons {
+    0% {
+        color: rgb(51, 65, 149);
+        text-shadow: 0px 0px 0px rgba(0,0,0,0.5);
+    }
+    100% {
+        color:white;
+        text-shadow:1px 1px 10px rgba(0,0,0,0.5);
+    }
 }
 /* -------------------------------------------------------------------------------------- */
