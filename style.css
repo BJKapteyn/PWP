@@ -1,18 +1,43 @@
+/* 
+    PALLETE
+
+    heavy main - blue -        rgb(51, 65, 149)
+    medium main - blue -       rgb(100, 122, 163)
+    light main - blue -        rgb(149, 178, 176)
+
+ */
 body {
+    background: linear-gradient(155deg, rgba(51,65,149,1) 7%, rgba(255,255,255,1) 63%); 
     min-height: 800px;
     font-family: "Arial Black", Gadget, sans-serif;
 }
 
+#PWP {
+    position: absolute;
+    top: 0;
+    left: 20px;
+}
+
 header {
+    position: relative;
     text-align: center;
+    color: white;
+
+}
+
+nav {
+    position: absolute;
+    right: 10px;
+    top: 10px;
 }
 
 header h1 {
-    font-size: 50px;
+    font-size: 70px;
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
 }
 
 header h2 {
-
+    color: white;
 }
 
 header h1, header h2 {
