@@ -29,7 +29,8 @@ header h1, header h2 {
 
 .carouselView {
     will-change: right;
-    right: 0%;
+    top:0;
+    right:0;
     height: 100%;
     position: absolute;
     width: 100%;
@@ -38,6 +39,7 @@ header h1, header h2 {
 }
 
 .carouselButton {
+    z-index: 10;
     position: absolute;
     height: auto;
     padding: 10px;
@@ -61,14 +63,14 @@ header h1, header h2 {
 }
 
 .slideLeft {
-    animation-direction: forwards;
+    animation-direction: normal;
     animation-name: slideLeft;
 }
 
 .slideFromRight {
-    animation-fill-mode: ;
+    animation-direction: reverse;
+    animation-name: slideRight;
 }
-
  /* --------------------------------Test--------------------------------------------------- */
 #carouselShow1 {
     background-color: green;
@@ -89,7 +91,6 @@ header h1, header h2 {
 #carouselShow5 {
     background-color: black;
 }
-
 /* -------------------------------------------------------------------------------------- */
  
 

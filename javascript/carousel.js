@@ -38,6 +38,7 @@ let carouselUtilities = {
             }
         }
     },
+    //increment all indexes at once
     changeViewIndexes: function(upOrDown = true) {
         carouselUtilities.currentViewIndex = carouselUtilities.changeIndex(upOrDown, this.currentViewIndex);
         carouselUtilities.leftViewIndex = carouselUtilities.changeIndex(upOrDown, this.leftViewIndex);
@@ -52,30 +53,30 @@ slideButtons.left.addEventListener('click', function(event) {
 
 slideButtons.right.addEventListener('click', function(event) {
     event.preventDefault();
-    slideCarousel(true)
+    slideCarousel(true);
 })
 
 //true is slide right false is slide left
 function slideCarousel(leftOrRight) {
     let currentView = carouselUtilities.carouselViews.item(carouselUtilities.currentViewIndex);
+    currentView.style.zIndex = "3";
+    
     let leftView = carouselUtilities.carouselViews.item(carouselUtilities.leftViewIndex);
-    let rightView = carouselUtilities.carouselViews.item(carouselUtilities.rightViewIndex)
-
+    leftView.style.zIndex = "1";
+    
+    let rightView = carouselUtilities.carouselViews.item(carouselUtilities.rightViewIndex);
+    rightView.style.zIndex = "1";
+    
+    debugger;
     if(leftOrRight) {
-        debugger;
+        rightView.style.zIndex = "2";
         currentView.classList.add("slideLeft");
-
-        rightView.style.right = "-105%";
-        rightView.classList.remove("noDisplay");
-        rightView.style.animationFillMode = "forwards";
-        rightView.style.animationDirection = "reverse";
-        rightView.style.animationName = "slideRight";
-
+        // rightView.classList.add("slideFromRight");
+        
         setTimeout(function() {
-            currentView.animationName = "";
-            currentView.classList.add("noDisplay");
-            rightView.animationName = "";
-            rightView.style.right = "0%";
+            currentView.style.zIndex = "1";
+            currentView.classList.remove("slideLeft");
+            // rightView.classList.remove("slideFromRight");
         }, 500)
     }
     //increment indexes
@@ -87,6 +88,20 @@ function slideLeft() {
     carouselUtilities.changeViewIndexes(false);
 }
 
+function initializedZIndexes() {
+    let carouselViews = document.querySelectorAll(".carouselView");
+
+    for(let i = 0; i < carouselViews.length; i++) {
+        if(i == 0) {
+            carouselViews.item(i).style.zIndex = "2";
+        }
+        else {
+            carouselViews.item(i).style.zIndex = "1";
+        }
+    }
+}
+
 window.onload = function() {
+    initializedZIndexes();
     carouselUtilities.leftViewIndex = carouselUtilities.carouselViews.length - 1;
 }
