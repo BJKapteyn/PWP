@@ -25,13 +25,6 @@ header {
     position: relative;
     text-align: center;
     color: white;
-
-}
-
-nav {
-    position: fixed;
-    right: 20px;
-    top: 20px;
 }
 
 header h1 {
@@ -48,6 +41,30 @@ header h1, header h2 {
 }
 
 /*----------------------------------Nav-------------------------------------------------------*/
+
+nav {
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    height: 50px;
+    width: 100%;
+}
+
+#navBar {
+    will-change: background-color;
+    background-color: rgba(0,0,0,0);
+    transition: background-color 500ms ease-out;
+}
+
+#navContainer {
+    will-change: right;
+    position: absolute;
+    right: 155px;
+    top: 30%;
+    width: 300px;
+    margin-right: -150px;
+    transition: right 500ms ease-out;
+}
 
 a.navButton {
     font-size: 20px;
