@@ -67,10 +67,11 @@ header h1, header h2 {
     animation-name: slideLeft;
 }
 
-.slideFromRight {
-    animation-direction: reverse;
+.slideRight {
+    animation-direction: normal;
     animation-name: slideRight;
 }
+
  /* --------------------------------Test--------------------------------------------------- */
 #carouselShow1 {
     background-color: green;
