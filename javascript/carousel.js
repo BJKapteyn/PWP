@@ -63,14 +63,20 @@ function slideCarousel(leftOrRight) {
 
     if(leftOrRight) {
         debugger;
-        currentView.style.right = "102%";
-        leftView.style.right = "-102%";
-        leftView.classList.remove("noDisplay");
-        leftView.style.right = "0%"
+        currentView.classList.add("slideLeft");
+
+        rightView.style.right = "-105%";
+        rightView.classList.remove("noDisplay");
+        rightView.style.animationFillMode = "forwards";
+        rightView.style.animationDirection = "reverse";
+        rightView.style.animationName = "slideRight";
 
         setTimeout(function() {
-            currerntView.classList.add("noDisplay");
-        }, 1000)
+            currentView.animationName = "";
+            currentView.classList.add("noDisplay");
+            rightView.animationName = "";
+            rightView.style.right = "0%";
+        }, 500)
     }
     //increment indexes
 
@@ -82,6 +88,5 @@ function slideLeft() {
 }
 
 window.onload = function() {
-    debugger;
     carouselUtilities.leftViewIndex = carouselUtilities.carouselViews.length - 1;
 }

@@ -23,21 +23,18 @@ header h1, header h2 {
 
 #carousel {
     width: 100%;
-    height: 500px;
+    height: 300px;
     position: relative;
 }
 
 .carouselView {
+    will-change: right;
     right: 0%;
     height: 100%;
     position: absolute;
     width: 100%;
     display: inline-block;
-    transition: right ease-out 500ms;
-    -webkit-transition: right ease-out 500ms;
-    -moz-transition: right ease-out 500ms;
-    -ms-transition: right ease-out 500ms;
-    -o-transition: right ease-out 500ms;
+    animation-duration: 500ms
 }
 
 .carouselButton {
@@ -57,6 +54,19 @@ header h1, header h2 {
 
 .noDisplay {
     display: none;
+}
+
+.slideLeft, .slideRight, .slideFromRight, .slideFromLeft {
+    animation-fill-mode: forwards;
+}
+
+.slideLeft {
+    animation-direction: forwards;
+    animation-name: slideLeft;
+}
+
+.slideFromRight {
+    animation-fill-mode: ;
 }
 
  /* --------------------------------Test--------------------------------------------------- */
