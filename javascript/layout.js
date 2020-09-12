@@ -16,7 +16,6 @@ function dockElement() {
 function unDockElement() {
     navElements.navBarContainer.style.right = "50%";
     navElements.navBar.style.backgroundColor = "rgba(0,0,0,0.5)";
-    debugger;
 
     for(let i = 0; i < navElements.navButtons.length; i++) {
         navElements.navButtons.item(i).style.color = "white";
