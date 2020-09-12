@@ -6,7 +6,7 @@ let navElements = {
 
 function dockElement() {
     navElements.navBar.style.backgroundColor = "rgba(0,0,0,0.0)";
-    navElements.navBarContainer.style.right = "155px";
+    navElements.navBarContainer.style.right = "15%";
 
     for(let i = 0; i < navElements.navButtons.length; i++) {
         navElements.navButtons.item(i).style.color = "";
