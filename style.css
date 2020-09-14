@@ -140,6 +140,17 @@ a.navButton {
     background-image: url("./pics/Hug.jpg");
 }
 
+#infoFlex {
+    display: flex;
+    width: 80%;
+    height: auto;
+    margin: auto;
+}
+
+#flexItem > h2 {
+    
+}
+
 /*----------------------------------Carousel--------------------------------------------------*/
 
 #carousel {
