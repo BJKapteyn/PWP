@@ -15,7 +15,7 @@ body {
     padding: 0px;
     margin: 0px;
     z-index: 9;
-    background: linear-gradient(155deg, rgba(51,65,149,1) 7%, rgba(255,255,255,1) 63%); 
+    background: linear-gradient(180deg, #8abcdd 7%, rgba(255,255,255,1) 63%); 
     min-height: 800px;
     font-family: "Arial Black", Gadget, sans-serif;
 }
@@ -25,9 +25,9 @@ body {
     position: absolute;
     top: 50%;
     left: 5%;
-    width: 20%;
+    width: 18%;
     height: auto;
-    margin-top: -370px;
+    margin-top: -100px;
 }
 
 header {
@@ -101,7 +101,8 @@ a.navButton {
 /* ----------------------------------Index---------------------------------------------------- */
 
 #siteTitle {
-    padding-top: 5%;
+    padding-bottom: 20%;
+    padding-top: 10%;
 }
 
 #siteTitle > h1, #siteTitle > h2 {
@@ -109,13 +110,17 @@ a.navButton {
 }
 
 #siteTitle > h1 {
-    font-size: ;
+    text-shadow: 1px 1px 8px rgba(0,0,0,0.2);
+    font-size: 70px;
 }
 
-
+#siteTitle > h2 {
+    opacity: 0.9;
+    font-size: 30px;
+}
 
 #mainBody {
-    background-color: white;
+    background-color: rgba(0,0,0,0);
     z-index: 10;
     margin: auto;
     width: 100%;
@@ -127,14 +132,13 @@ a.navButton {
     position: relative;
     margin: auto;
     height: auto;
-    height: 1000px;
+    height: auto;
     width: 100%;
     max-width: 1700px;
     background-size: contain;
     background-repeat: no-repeat;
     background-image: url("./pics/Hug.jpg");
 }
-
 
 /*----------------------------------Carousel--------------------------------------------------*/
 
