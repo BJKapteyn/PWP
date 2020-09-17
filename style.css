@@ -11,10 +11,23 @@ html {
     margin: 0px;
 }
 
+h1 {
+    font-size: 4vw;
+    text-align: center;
+}
+
+h2 {
+    font-size: 3vw;
+    text-align: center;
+}
+
+p {
+    font-size: 1.5vw;
+}
+
 body {
     padding: 0px;
     margin: 0px;
-    z-index: 9;
     background: linear-gradient(180deg, #8abcdd 7%, rgba(255,255,255,1) 63%); 
     min-height: 800px;
     font-family: "Arial Black", Gadget, sans-serif;
@@ -123,7 +136,7 @@ a.navButton {
     background-color: rgba(0,0,0,0);
     z-index: 10;
     margin: auto;
-    width: 100%;
+    width: 90%;
     max-width: 1800px;
     min-height: 600px;
 }
@@ -141,15 +154,55 @@ a.navButton {
 }
 
 #infoFlex {
+    width: 98%;
     display: flex;
-    width: 80%;
+    flex-wrap: wrap;
     height: auto;
     margin: auto;
+    justify-content: center;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.flexItem {
+    margin: 10px;
+    min-width: 200px;
+    max-width: 30%;
 }
 
 #flexItem > h2 {
-    
+    text-align: center;
+    color: white;
+    background-color: gray;
 }
+
+#flexItem > p {
+    font-size: 1.5vw;
+}
+
+#about {
+    margin: auto;
+    width: 98%;
+    background:#2f477d;
+    color: white;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+#about > h1 {
+    text-align: center;
+}
+
+#about > * {
+    padding: 10px 20px;
+}
+
 
 /*----------------------------------Carousel--------------------------------------------------*/
 
