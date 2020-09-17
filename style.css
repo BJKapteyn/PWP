@@ -40,7 +40,7 @@ body {
     left: 5%;
     width: 18%;
     height: auto;
-    margin-top: -100px;
+    margin-top: -75px;
 }
 
 header {
@@ -159,7 +159,7 @@ a.navButton {
     flex-wrap: wrap;
     height: auto;
     margin: auto;
-    justify-content: center;
+    justify-content: space-between;
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
