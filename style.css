@@ -22,13 +22,13 @@ h2 {
 }
 
 p {
+    line-height: 150%;
     font-size: 1.5vw;
 }
 
 body {
     padding: 0px;
     margin: 0px;
-    background: linear-gradient(180deg, #8abcdd 7%, rgba(255,255,255,1) 63%); 
     min-height: 800px;
     font-family: "Arial Black", Gadget, sans-serif;
 }
@@ -113,6 +113,10 @@ a.navButton {
 
 /* ----------------------------------Index---------------------------------------------------- */
 
+#indexHead {
+    background: #8abcdd;
+}
+
 #siteTitle {
     padding-bottom: 20%;
     padding-top: 10%;
@@ -124,21 +128,24 @@ a.navButton {
 
 #siteTitle > h1 {
     text-shadow: 1px 1px 8px rgba(0,0,0,0.2);
-    font-size: 70px;
+    font-size: 5vw;
 }
 
 #siteTitle > h2 {
     opacity: 0.9;
-    font-size: 30px;
+    font-size: 3vw;
 }
 
 #mainBody {
-    background-color: rgba(0,0,0,0);
+    background: linear-gradient(180deg, #8abcdd 7%, rgba(255,255,255,1) 63%); 
     z-index: 10;
-    margin: auto;
-    width: 90%;
-    max-width: 1800px;
+    width: 100%;
     min-height: 600px;
+}
+
+#mainBody > * {
+    width: 90%;
+    margin: auto;
 }
 
 .frontHeader {
@@ -186,21 +193,44 @@ a.navButton {
 #about {
     margin: auto;
     width: 98%;
-    background:#2f477d;
-    color: white;
+}
+
+#aboutInfo {
+    box-shadow: 1px 0px 8px rgba(0, 0, 0, 0.5);
+    display: grid;
+    grid-template: "aboutText image" 100% / 70% 30%;
     border-radius: 10px;
+    margin: 0px;
+    padding: 0px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    background:#2f477d;
+    color: white;
+}
+
+#aboutText {
+    margin: 0px;
+    padding: 30px;
+    grid-area: aboutText;
+}
+
+#aboutImg {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 100%;
+    height: auto;
+    grid-area: image;
 }
 
 #about > h1 {
+    margin-top: 0px;
+    color: #2f477d;
     text-align: center;
 }
 
 #about > * {
-    padding: 10px 20px;
 }
 
 /* -----------------------------------------Contact------------------------------------------ */
