@@ -112,6 +112,15 @@ a.navButton {
     text-decoration: none;
 }
 
+.navButton:active {
+    color: rgb(149, 178, 176) !important;
+    transition: color 20ms;
+    -webkit-transition: color 20ms;
+    -moz-transition: color 20ms;
+    -ms-transition: color 20ms;
+    -o-transition: color 20ms;
+}
+
 .navButton:hover {
     color: white;
     text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
@@ -171,7 +180,7 @@ a.navButton {
     flex-wrap: wrap;
     height: auto;
     margin: auto;
-    justify-content: space-between;
+    justify-content: space-around;
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
