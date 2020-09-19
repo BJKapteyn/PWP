@@ -132,6 +132,10 @@ a.navButton {
     background: #8abcdd;
 }
 
+#indexBodyContainer > div {
+    margin-bottom: 3%;
+}
+
 #siteTitle {
     padding-bottom: 20%;
     padding-top: 10%;
@@ -175,12 +179,11 @@ a.navButton {
 }
 
 #infoFlex {
-    width: 98%;
     display: flex;
     flex-wrap: wrap;
     height: auto;
     margin: auto;
-    justify-content: space-around;
+    justify-content: space-between;
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
@@ -189,24 +192,53 @@ a.navButton {
 }
 
 .flexItem {
+    border-collapse: collapse;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
     margin: 10px;
     min-width: 200px;
     max-width: 30%;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
 }
 
-#flexItem > h2 {
+.flexItem > h2 {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin: 0px;
+    padding: 20px 0px;
     text-align: center;
     color: white;
     background-color: gray;
+    text-shadow: 1px 1px 10px black;
+    background-size: 115%;
+
 }
 
-#flexItem > p {
+.flexItem > p {
     font-size: 1.5vw;
+    padding: 20px;
 }
 
 #about {
     margin: auto;
     width: 98%;
+}
+
+#infoBox1 > h2 {
+    background-image: url("./pics/SunsetHug_header.jpg");
+}
+
+#infoBox2 > h2 {
+    background-image: url("./pics/star_header.jpg");
+    background-position-y: center;
+}
+
+#infoBox3 > h2 {
+    background-image: url("./pics/swing_header.jpg");
+    background-position-y: center;
 }
 
 #aboutInfo {
