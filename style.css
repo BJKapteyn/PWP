@@ -22,7 +22,7 @@ h2 {
 }
 
 p {
-    line-height: 150%;
+    line-height: 200%;
     font-size: 1.5vw;
 }
 
@@ -37,10 +37,10 @@ body {
 #PWP {
     position: absolute;
     top: 50%;
-    left: 5%;
-    width: 18%;
+    left: 3%;
+    width: 30%;
     height: auto;
-    margin-top: -75px;
+    margin-top: -18%;
 }
 
 header {
@@ -61,6 +61,12 @@ header > h2 {
 
 header > h1, header > h2 {
     display: inline-block;
+}
+
+footer {
+    background: linear-gradient(0deg, #8abcdd, rgba(255,255,255,1) 100%); 
+    height: 200px;
+    width: 100%;
 }
 
 /*----------------------------------Nav-------------------------------------------------------*/
@@ -127,7 +133,7 @@ a.navButton {
 }
 
 #siteTitle > h1 {
-    text-shadow: 1px 1px 8px rgba(0,0,0,0.2);
+    text-shadow: 1px 1px 8px rgba(0,0,0,0.3);
     font-size: 5vw;
 }
 
@@ -154,7 +160,6 @@ a.navButton {
     height: auto;
     height: auto;
     width: 100%;
-    max-width: 1700px;
     background-size: contain;
     background-repeat: no-repeat;
     background-image: url("./pics/Hug.jpg");
@@ -196,9 +201,9 @@ a.navButton {
 }
 
 #aboutInfo {
-    box-shadow: 1px 0px 8px rgba(0, 0, 0, 0.5);
+    box-shadow: 1px 1px 20px rgba(50, 50, 50, 0.3);
     display: grid;
-    grid-template: "aboutText image" 100% / 70% 30%;
+    grid-template: "aboutText image" 100% / 1fr 40%;
     border-radius: 10px;
     margin: 0px;
     padding: 0px;
@@ -206,7 +211,7 @@ a.navButton {
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
-    background:#2f477d;
+    background:rgb(51, 65, 149);
     color: white;
 }
 
