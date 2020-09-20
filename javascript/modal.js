@@ -33,7 +33,16 @@ function modalElements() {
     this.emailTitle = document.createElement("h3");
     this.email = document.createElement("p");
     this.elements = [this.title, this.zoneStatesTitle, this.zoneStates, this.phoneTitle, this.phoneNumber, this.emailTitle, this.email];
-    
+    this.buildModal = function(elements, contactModal = new contactModal()) {
+        let modal = document.createElement("div");
+        modal.className = "contactModal";
+
+        for(let i = 0; i < elements.length; i++) {
+            modal.appendChild(elements[i]);
+        }
+
+        return modal;
+    }
 }
 
 function createModal(contactModal = new contactModal()) {
