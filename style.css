@@ -295,9 +295,20 @@ a.navButton {
     z-index: 12;
 }
 
+#modalStandin > * {
+    text-align: center;
+}
+
 #modalStandin > p {
     padding: 10px;
     font-size: 20px;
+    width: 100%;
+    height: auto;
+
+}
+
+#modalStandin > h3 {
+    padding-top: 20px;
 }
 
 #modalBackground {
