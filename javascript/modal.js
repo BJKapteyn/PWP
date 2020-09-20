@@ -17,11 +17,13 @@ let vectorZones = {
 }
 
 //contains info on what should go in the modal
-function contactModal(zoneStr, zoneStatesStr, zonePresStr, phoneNumberStr = "555-555-5555", zoneChaptersStr) {
+//enter number in 555-555-5555 format for phone number href purposes
+function contactModal(zoneStr, zoneStatesStr, zonePresStr, phoneNumberStr = "555-555-5555", zoneChaptersStr, contactEmailStr) {
     this.zone = zoneStr;
     this.zoneStates = zoneStatesStr;
     this.zoneChapters = zoneChaptersStr;
     this.zonePres = zonePresStr;
+    this.contactEmail = contactEmailStr;
     this.contactPhone = phoneNumberstr;
     this.contactSrc = `tel:+${phoneNumberStr}`;
 }
@@ -31,6 +33,7 @@ function modalElements(contactModal = new contactModal()) {
     let zoneStatesTitle = document.createElement("h3");
     let zoneStates = document.createElement("p");
     let zonePresTitle = document.createElement("h3");
+    let zonePres = document.createElement("p");
     let phoneTitle = document.createElement("h3");
     let phoneNumber = document.createElement("a");
     let emailTitle = document.createElement("h3");
@@ -41,16 +44,20 @@ function modalElements(contactModal = new contactModal()) {
     zone.innerText = contactModal.zone;
     zoneStatesTitle.innerText = "States Covered:";
     zoneStates.innerText = contactModal.zoneStates;
-    zonePres
+    zonePresTitle.innerText = "Zone President";
+    zonePres.innerText = contactModal.zonePres;
 
     phoneTitle.innerText = "Contact Number";
-    phoneNumber.src = contactModal.contactPhone;
-    phoneNumber
+    phoneNumber.href = contactModal.contactSrc;
+    phoneNumber.innerText = phoneNumberBuilder(contactModal.contactPhone);
+
+    emailTitle.innerText = "Email:"
+    email.innerText = contactModal.contactEmail;
     // title.className = "modalTitle";
     // zoneStatesTitle.className = "modalSubtitle";
     // phoneTitle.className = "modalSubtitle";
     
-    
+    //order matters as they will be displayed on page in order
     let elements = [zone, zoneStatesTitle, zoneStates, zonePresTitle, zonePres, phoneTitle, phoneNumber,  emailTitle, email];
     for(let i = 0; i < elements.length; i++) {
         modal.appendChild(elements[i]);
