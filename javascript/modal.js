@@ -24,25 +24,28 @@ function contactModal(titleStr, zoneStatesStr, zonePresStr, phoneNumberStr) {
     this.contactPhone = `tel:+${phoneNumberStr}`;
 }
 
-function modalElements() {
-    this.title = document.createElement("h2");
-    this.zoneStatesTitle = document.createElement("h3");
-    this.zoneStates = document.createElement("p");
-    this.phoneTitle = document.createElement("h3");
-    this.phoneNumber = document.createElement("p");
-    this.emailTitle = document.createElement("h3");
-    this.email = document.createElement("p");
-    this.elements = [this.title, this.zoneStatesTitle, this.zoneStates, this.phoneTitle, this.phoneNumber, this.emailTitle, this.email];
-    this.buildModal = function(elements, contactModal = new contactModal()) {
-        let modal = document.createElement("div");
-        modal.className = "contactModal";
+function modalElements(contactModal = new contactModal()) {
+    let title = document.createElement("h2");
+    let zoneStatesTitle = document.createElement("h3");
+    let zoneStates = document.createElement("p");
+    let phoneTitle = document.createElement("h3");
+    let phoneNumber = document.createElement("p");
+    let emailTitle = document.createElement("h3");
+    let email = document.createElement("p");
+    let elements = [this.title, this.zoneStatesTitle, this.zoneStates, this.phoneTitle, this.phoneNumber, this.emailTitle, this.email];
+    let modal = document.createElement("div");
+    
+    // title.className = "modalTitle";
+    // zoneStatesTitle.className = "modalSubtitle";
+    // phoneTitle.className = "modalSubtitle";
 
-        for(let i = 0; i < elements.length; i++) {
-            modal.appendChild(elements[i]);
-        }
+    modal.id = "contactModal";
 
-        return modal;
+    for(let i = 0; i < elements.length; i++) {
+        modal.appendChild(elements[i]);
     }
+
+    return modal;
 }
 
 function createModal(contactModal = new contactModal()) {
