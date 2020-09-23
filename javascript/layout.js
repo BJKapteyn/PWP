@@ -38,7 +38,3 @@ function dockUnDock() {
 window.onscroll = function() {
     dockUnDock();
 }
-
-window.onload = function() {
-
-}

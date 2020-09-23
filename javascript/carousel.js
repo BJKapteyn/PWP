@@ -59,6 +59,7 @@ slideButtons.right.addEventListener('click', function(event) {
 //true is slide right false is slide left
 function slideCarousel(leftOrRight) {
     //primethe z-index of the view to the 'left' and 'right' of the current view
+    debugger;
     let currentView = carouselUtilities.carouselViews.item(carouselUtilities.currentViewIndex);
     currentView.style.zIndex = "3";
     
@@ -68,7 +69,6 @@ function slideCarousel(leftOrRight) {
     let rightView = carouselUtilities.carouselViews.item(carouselUtilities.rightViewIndex);
     rightView.style.zIndex = "1";
     
-    debugger;
     if(leftOrRight) {
         rightView.style.zIndex = "2";//elevate the z-index
         currentView.classList.add("slideLeft");
@@ -95,6 +95,7 @@ function slideLeft() {
 }
 
 function initializedZIndexes() {
+    debugger;
     let carouselViews = document.querySelectorAll(".carouselView");
 
     for(let i = 0; i < carouselViews.length; i++) {
@@ -108,6 +109,7 @@ function initializedZIndexes() {
 }
 
 window.onload = function() {
+    console.log("page loaded")
     initializedZIndexes();
     carouselUtilities.leftViewIndex = carouselUtilities.carouselViews.length - 1;
 }

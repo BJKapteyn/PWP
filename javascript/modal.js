@@ -70,9 +70,6 @@ function createModal(contactModal = new contactModal()) {
 
 } 
 
-window.onload = function() {
-
-}
 
 function phoneNumberBuilder(pNumberStr = "555-555-5555") {//build phone number, returns default phone number if nothing is given.
     pNumberArr = pNumberStr.split('-');
