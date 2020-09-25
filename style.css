@@ -34,10 +34,10 @@ body {
 }
 
 #footerLogo {
-    height: 100%;
-    width: auto;
     position: absolute;
+    width: 13%;
     left: 10%;
+    opacity: .5;
 }
 /* SVG Logo */
 #PWP {
@@ -55,6 +55,29 @@ header {
     position: relative;
     text-align: center;
     color: white;
+}
+
+#pageSplit {
+    position: relative;
+    margin: 50px 0px;
+    height: 450px;
+    background-image: url("./pics/Father.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y: 95%;
+    background-size: cover;
+}
+
+#pageSplit > p {
+    text-align: center;
+    font-size: 2.5vw;
+    color: white;
+    text-shadow: 1px 1px 8px rgba(56, 13, 13, 0.4);
+    position: absolute;
+    right: 5%;
+    width: 28%;
+    top: 50%;
+    margin-top: -10%;
 }
 
 header > h1, #footerTitle > h1 {
@@ -152,7 +175,7 @@ a.navButton {
 #indexBodyContainer > h1 {
     text-shadow: 1px 1px 8px rgba(255,255,255,0.5);
     margin-top: 0px;
-    padding-top: 20px;
+    padding-bottom: 20px;
     color: #2f477d;
     text-align: center;
 }
@@ -182,14 +205,14 @@ a.navButton {
     text-shadow: 1px 1px 3px gray;
 }
 
-.mainBody {
+#mainBody {
     background: linear-gradient(180deg, #8abcdd 7%, rgba(255,255,255,1) 63%); 
     z-index: 10;
     width: 100%;
     min-height: 600px;
 }
 
-.mainBody > * {
+#indexBodyContainer > h1, #indexBodyContainer > div#about, #indexBodyContainer > div#infoFlex {
     width: 90%;
     margin: auto;
 }
