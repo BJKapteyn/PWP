@@ -109,7 +109,7 @@ function initializedZIndexes() {
 }
 
 window.onload = function() {
-    console.log("page loaded")
+    console.log("page loaded");
     initializedZIndexes();
     carouselUtilities.leftViewIndex = carouselUtilities.carouselViews.length - 1;
 }

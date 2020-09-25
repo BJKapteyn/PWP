@@ -23,7 +23,6 @@ function unDockElement() {
 }
 
 function dockUnDock() {
-    console.log(window.pageYOffset);
     let offset = window.pageYOffset;
     if(offset >= 100 || offset <= 300) {
         if (window.pageYOffset >= 175) {

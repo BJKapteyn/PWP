@@ -33,8 +33,15 @@ body {
     font-family: "Arial Black", Gadget, sans-serif;
 }
 
+#footerLogo {
+    height: 100%;
+    width: auto;
+    position: absolute;
+    left: 10%;
+}
 /* SVG Logo */
 #PWP {
+    opacity: 0.2;
     position: absolute;
     top: 50%;
     left: 3%;
@@ -143,6 +150,7 @@ a.navButton {
 }
 
 #indexBodyContainer > h1 {
+    text-shadow: 1px 1px 8px rgba(255,255,255,0.5);
     margin-top: 0px;
     padding-top: 20px;
     color: #2f477d;
@@ -152,6 +160,11 @@ a.navButton {
 #siteTitle {
     padding-bottom: 20%;
     padding-top: 10%;
+}
+
+.fullPic {
+    width: 100%;
+    height: auto;
 }
 
 #siteTitle > h1, #siteTitle > h2 {
@@ -166,16 +179,17 @@ a.navButton {
 #siteTitle > h2 {
     opacity: 0.9;
     font-size: 3vw;
+    text-shadow: 1px 1px 3px gray;
 }
 
-#mainBody {
+.mainBody {
     background: linear-gradient(180deg, #8abcdd 7%, rgba(255,255,255,1) 63%); 
     z-index: 10;
     width: 100%;
     min-height: 600px;
 }
 
-#mainBody > * {
+.mainBody > * {
     width: 90%;
     margin: auto;
 }
