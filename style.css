@@ -63,9 +63,11 @@ body {
 
 #footerLogo {
   position: absolute;
-  width: 13%;
+  width: 12%;
   left: 10%;
   opacity: 0.5;
+  top: 50%;
+  margin-top: -6.5%;
 }
 /* SVG Logo */
 #PWP {
@@ -129,6 +131,7 @@ footer {
   background: linear-gradient(0deg, #8abcdd, rgba(255, 255, 255, 1) 100%);
   height: 200px;
   width: 100%;
+  position: relative;
 }
 
 #footerTitle {
@@ -361,6 +364,12 @@ a.navButton {
 }
 /* -----------------------------------------Contact------------------------------------------ */
 
+iframe {
+  height: 500px;
+  border: none;
+  width: 100%;
+}
+
 #contactTitle {
 }
 
@@ -372,6 +381,27 @@ a.navButton {
 #contactContainer {
   padding: 20px 0px;
 }
+
+.zone path,
+                .zone rect,
+                .zone text,
+                .zone tspan {
+                  will-change: fill;
+                  transition: fill 300ms linear;
+                  -webkit-transition: fill 300ms linear;
+                  -moz-transition: fill 300ms linear;
+                  -ms-transition: fill 300ms linear;
+                  -o-transition: fill 300ms linear;
+}
+
+                .zone:hover {
+                  cursor: pointer;
+                }
+
+                .zone:hover > path,
+                .zone:hover > rect {
+                  fill: blue !important;
+                }
 
 #mapContainer {
   width: 90%;
@@ -385,6 +415,10 @@ a.navButton {
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
+}
+
+#mapVector {
+  height: auto;
 }
 
 #contactTitle > * {

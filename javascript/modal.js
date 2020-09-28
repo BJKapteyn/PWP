@@ -1,3 +1,5 @@
+let iframe = document.getElementById("iframeMap")
+
 let modalElements = {
     modalStandin: document.querySelector("#modalStandin"),
     modalBackgroudn: document.querySelector("#modalBackground")
@@ -9,11 +11,7 @@ function clearElement(parentElement = document.querySelector("")) {
 
 //Each zone on the SVG map
 let vectorZones = {
-    zoneB: document.querySelector("#zoneB"),
-    zoneC: document.querySelector("#zoneC"),
-    zoneC: document.querySelector("#zoneD"),
-    zoneC: document.querySelector("#zoneF"),
-    zoneC: document.querySelector("#zoneH")
+    
 }
 
 //contains info on what should go in the modal
@@ -28,7 +26,7 @@ function contactModal(zoneStr, zoneStatesStr, zonePresStr, phoneNumberStr = "555
     this.contactSrc = `tel:+${phoneNumberStr}`;
 }
 
-function modalElements(contactModal = new contactModal()) {
+function createModalElements(contactModal = new contactModal()) {
     let zone = document.createElement("h2");
     let zoneStatesTitle = document.createElement("h3");
     let zoneStates = document.createElement("p");
@@ -64,6 +62,16 @@ function modalElements(contactModal = new contactModal()) {
     }
 
     return modal;
+}
+
+function initializeElements() {
+    vectorZones = {
+        zoneB: iframe.contentWindow.document.getElementById("#zoneB"),
+        zoneC: iframe.contentWindow.document.getElementById("#zoneC"),
+        zoneC: iframe.contentwindow.document.getElementById("#zoneD"),
+        zoneC: iframe.contentwindow.document.getElementById("#zoneF"),
+        zoneC: iframe.contentwindow.document.getElementById("#zoneH")
+    }
 }
 
 function createModal(contactModal = new contactModal()) {
