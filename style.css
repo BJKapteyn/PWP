@@ -7,493 +7,560 @@
 
  */
 html {
-    padding: 0px;
-    margin: 0px;
+  padding: 0px;
+  margin: 0px;
 }
 
 h1 {
-    font-size: 4vw;
-    text-align: center;
+  font-size: 4vw;
 }
 
 h2 {
-    font-size: 3vw;
-    text-align: center;
+  font-size: 3vw;
+}
+
+h1,
+h2 {
+  text-align: center;
 }
 
 p {
-    line-height: 200%;
-    font-size: 1.5vw;
+  line-height: 200%;
+  font-size: 1.5vw;
 }
 
 body {
-    padding: 0px;
-    margin: 0px;
-    min-height: 800px;
-    font-family: "Arial Black", Gadget, sans-serif;
+  padding: 0px;
+  margin: 0px;
+  min-height: 800px;
+  font-family: "Arial Black", Gadget, sans-serif;
+}
+
+/* svg {
+    width
+} */
+
+.zone path,
+.zone rect,
+.zone text,
+.zone tspan {
+  will-change: fill;
+  transition: fill 400ms ease-out;
+  -webkit-transition: fill 400ms ease-out;
+  -moz-transition: fill 400ms ease-out;
+  -ms-transition: fill 400ms ease-out;
+  -o-transition: fill 400ms ease-out;
+}
+
+.zone:hover {
+  cursor: pointer;
+}
+
+.zone:hover > path,
+.zone:hover > rect {
+  fill: blue !important;
 }
 
 #footerLogo {
-    position: absolute;
-    width: 13%;
-    left: 10%;
-    opacity: .5;
+  position: absolute;
+  width: 13%;
+  left: 10%;
+  opacity: 0.5;
 }
 /* SVG Logo */
 #PWP {
-    opacity: 0.2;
-    position: absolute;
-    top: 50%;
-    left: 3%;
-    width: 30%;
-    height: auto;
-    margin-top: -18%;
+  opacity: 0.2;
+  position: absolute;
+  top: 50%;
+  left: 3%;
+  width: 30%;
+  height: auto;
+  margin-top: -18%;
 }
 
 header {
-    z-index: 10;
-    position: relative;
-    text-align: center;
-    color: white;
+  z-index: 10;
+  position: relative;
+  text-align: center;
+  color: white;
 }
 
 #pageSplit {
-    position: relative;
-    margin: 50px 0px;
-    height: 450px;
-    background-image: url("./pics/Father.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-position-y: 95%;
-    background-size: cover;
+  position: relative;
+  margin: 50px 0px;
+  height: 450px;
+  background-image: url("./pics/Father.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position-y: 95%;
+  background-size: cover;
 }
 
 #pageSplit > p {
-    text-align: center;
-    font-size: 2.5vw;
-    color: white;
-    text-shadow: 1px 1px 8px rgba(56, 13, 13, 0.4);
-    position: absolute;
-    right: 5%;
-    width: 28%;
-    top: 50%;
-    margin-top: -10%;
+  text-align: center;
+  font-size: 2.5vw;
+  color: white;
+  text-shadow: 1px 1px 8px rgba(56, 13, 13, 0.4);
+  position: absolute;
+  right: 5%;
+  width: 28%;
+  top: 50%;
+  margin-top: -10%;
 }
 
-header > h1, #footerTitle > h1 {
-    font-size: 70px;
-    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+header > h1,
+#footerTitle > h1 {
+  font-size: 70px;
+  text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
 }
 
-header > h2, #footerTitle > h2 {
-    color: white;
+header > h2,
+#footerTitle > h2 {
+  color: white;
 }
 
-header > h1, header > h2, footer *{
-    display: inline-block;
+header > h1,
+header > h2,
+footer * {
+  display: inline-block;
 }
 
 footer {
-    background: linear-gradient(0deg, #8abcdd, rgba(255,255,255,1) 100%); 
-    height: 200px;
-    width: 100%;
+  background: linear-gradient(0deg, #8abcdd, rgba(255, 255, 255, 1) 100%);
+  height: 200px;
+  width: 100%;
 }
 
 #footerTitle {
-    text-align: center;
-    width: 100%;
+  text-align: center;
+  width: 100%;
 }
 
 /*----------------------------------Nav-------------------------------------------------------*/
 
 nav {
-    position: fixed;
-    right: 0px;
-    top: 0px;
-    height: 50px;
-    width: 100%;
+  position: fixed;
+  right: 0px;
+  top: 0px;
+  height: 50px;
+  width: 100%;
 }
 
 #navBar {
-    will-change: background-color;
-    background-color: rgba(0,0,0,0);
-    transition: background-color 500ms ease-out;
+  will-change: background-color;
+  background-color: rgba(0, 0, 0, 0);
+  transition: background-color 500ms ease-out;
 }
 
 #navContainer {
-    will-change: right;
-    position: absolute;
-    right: 15%;
-    top: 30%;
-    width: 300px;
-    margin-right: -150px;
-    transition: right 500ms ease-out;
+  will-change: right;
+  position: absolute;
+  right: 15%;
+  top: 30%;
+  width: 300px;
+  margin-right: -150px;
+  transition: right 500ms ease-out;
 }
 
 a.navButton {
-    font-size: 20px;
-    padding: 10px;
-    will-change: text-shadow, color;
-    color: rgb(51, 65, 149);
-    text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.5);
-    transition: color 500ms ease-out, text-shadow 500ms ease-out;
-    -webkit-transition: color 500ms ease-out, text-shadow 500ms ease-out;
-    -moz-transition: color 500ms ease-out, text-shadow 500ms ease-out;
-    -ms-transition: color 500ms ease-out, text-shadow 500ms ease-out;
-    -o-transition: color 500ms ease-out, text-shadow 500ms ease-out;
+  font-size: 20px;
+  padding: 10px;
+  will-change: text-shadow, color;
+  color: rgb(51, 65, 149);
+  text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.5);
+  transition: color 500ms ease-out, text-shadow 500ms ease-out;
+  -webkit-transition: color 500ms ease-out, text-shadow 500ms ease-out;
+  -moz-transition: color 500ms ease-out, text-shadow 500ms ease-out;
+  -ms-transition: color 500ms ease-out, text-shadow 500ms ease-out;
+  -o-transition: color 500ms ease-out, text-shadow 500ms ease-out;
 }
 
-.navButton, .navButton:hover, .navButton:active, .navButton:visited {
-    text-decoration: none;
+.navButton,
+.navButton:hover,
+.navButton:active,
+.navButton:visited {
+  text-decoration: none;
 }
 
 .navButton:active {
-    color: rgb(149, 178, 176) !important;
-    transition: color 20ms;
-    -webkit-transition: color 20ms;
-    -moz-transition: color 20ms;
-    -ms-transition: color 20ms;
-    -o-transition: color 20ms;
+  color: rgb(149, 178, 176) !important;
+  transition: color 20ms;
+  -webkit-transition: color 20ms;
+  -moz-transition: color 20ms;
+  -ms-transition: color 20ms;
+  -o-transition: color 20ms;
 }
 
 .navButton:hover {
-    color: white;
-    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+  color: white;
+  text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
 }
 
 /* ----------------------------------Index---------------------------------------------------- */
 
 #indexHead {
-    background: #8abcdd;
+  background: #8abcdd;
 }
 
 #indexBodyContainer > div {
-    margin-bottom: 3%;
-
+  margin-bottom: 3%;
 }
 
 #indexBodyContainer > h1 {
-    text-shadow: 1px 1px 8px rgba(255,255,255,0.5);
-    margin-top: 0px;
-    padding-bottom: 20px;
-    color: #2f477d;
-    text-align: center;
+  text-shadow: 1px 1px 8px rgba(255, 255, 255, 0.5);
+  margin-top: 0px;
+  padding-bottom: 20px;
+  color: #2f477d;
 }
 
 #siteTitle {
-    padding-bottom: 20%;
-    padding-top: 10%;
+  padding-bottom: 20%;
+  padding-top: 10%;
 }
 
 .fullPic {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
-#siteTitle > h1, #siteTitle > h2 {
-    display: inline-block;
+#siteTitle > h1,
+#siteTitle > h2 {
+  display: inline-block;
 }
 
 #siteTitle > h1 {
-    text-shadow: 1px 1px 8px rgba(0,0,0,0.3);
-    font-size: 5vw;
+  text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
+  font-size: 5vw;
 }
 
 #siteTitle > h2 {
-    opacity: 0.9;
-    font-size: 3vw;
-    text-shadow: 1px 1px 3px gray;
+  opacity: 0.9;
+  font-size: 3vw;
+  text-shadow: 1px 1px 3px gray;
 }
 
 #mainBody {
-    background: linear-gradient(180deg, #8abcdd 7%, rgba(255,255,255,1) 63%); 
-    z-index: 10;
-    width: 100%;
-    min-height: 600px;
+  background: linear-gradient(180deg, #8abcdd 7%, rgba(255, 255, 255, 1) 63%);
+  z-index: 10;
+  width: 100%;
+  min-height: 600px;
 }
 
-#indexBodyContainer > h1, #indexBodyContainer > div#about, #indexBodyContainer > div#infoFlex {
-    width: 90%;
-    margin: auto;
+#indexBodyContainer > h1,
+#indexBodyContainer > div#about,
+#indexBodyContainer > div#infoFlex {
+  width: 90%;
+  margin: auto;
 }
 
 .frontHeader {
-    position: relative;
-    margin: auto;
-    height: auto;
-    height: auto;
-    width: 100%;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-image: url("./pics/Hug.jpg");
+  position: relative;
+  margin: auto;
+  height: auto;
+  height: auto;
+  width: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("./pics/Hug.jpg");
 }
 
 #infoFlex {
-    display: flex;
-    flex-wrap: wrap;
-    height: auto;
-    margin: auto;
-    justify-content: space-between;
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  height: auto;
+  margin: auto;
+  justify-content: space-between;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
 
 .flexItem {
-    border-collapse: collapse;
-    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-    margin: 10px;
-    min-width: 200px;
-    max-width: 30%;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
+  border-collapse: collapse;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  margin: 10px;
+  min-width: 200px;
+  max-width: 30%;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
 
 .flexItem > h2 {
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    margin: 0px;
-    padding: 20px 0px;
-    text-align: center;
-    color: white;
-    background-color: gray;
-    text-shadow: 1px 1px 10px black;
-    background-size: 115%;
-
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  margin: 0px;
+  padding: 20px 0px;
+  text-align: center;
+  color: white;
+  background-color: gray;
+  text-shadow: 1px 1px 10px black;
+  background-size: 115%;
 }
 
 .flexItem > p {
-    font-size: 1.5vw;
-    padding: 20px;
+  font-size: 1.5vw;
+  padding: 20px;
 }
 
 #about {
-    margin: auto;
-    width: 98%;
+  margin: auto;
+  width: 98%;
 }
 
 #infoBox1 > h2 {
-    background-image: url("./pics/SunsetHug_header.jpg");
+  background-image: url("./pics/SunsetHug_header.jpg");
 }
 
 #infoBox2 > h2 {
-    background-image: url("./pics/star_header.jpg");
-    background-position-y: center;
+  background-image: url("./pics/star_header.jpg");
+  background-position-y: center;
 }
 
 #infoBox3 > h2 {
-    background-image: url("./pics/swing_header.jpg");
-    background-position-y: center;
+  background-image: url("./pics/swing_header.jpg");
+  background-position-y: center;
 }
 
 #aboutInfo {
-    box-shadow: 1px 1px 20px rgba(50, 50, 50, 0.3);
-    display: grid;
-    grid-template: "aboutText image" 100% / 1fr 40%;
-    border-radius: 10px;
-    margin: 0px;
-    padding: 0px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
-    background:rgb(51, 65, 149);
-    color: white;
+  box-shadow: 1px 1px 20px rgba(50, 50, 50, 0.3);
+  display: grid;
+  grid-template: "aboutText image" 100% / 1fr 40%;
+  border-radius: 10px;
+  margin: 0px;
+  padding: 0px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  background: rgb(51, 65, 149);
+  color: white;
 }
 
 #aboutText {
-    margin: 0px;
-    padding: 30px;
-    grid-area: aboutText;
+  margin: 0px;
+  padding: 30px;
+  grid-area: aboutText;
 }
 
 #aboutImg {
-    background-image: url("./pics/airborn.jpg");
-    background-size: 50%;
-    background-position: 100% -3%;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    width: 100%;
-    height: auto;
-    grid-area: image;
+  background-image: url("./pics/airborn.jpg");
+  background-size: 50%;
+  background-position: 100% -3%;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  width: 100%;
+  height: auto;
+  grid-area: image;
 }
 /* -----------------------------------------Contact------------------------------------------ */
 
 #contactTitle {
+}
 
+#contactMain {
+  min-height: 800px;
+  background: linear-gradient(180deg, #8abcdd, rgba(255, 255, 255, 1) 100%);
+}
+
+#contactContainer {
+  padding: 20px 0px;
+}
+
+#mapContainer {
+  width: 90%;
+  overflow: auto;
+  min-height: 500px;
+  background: white;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  margin: auto;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
 
 #contactTitle > * {
-    display: inline-block;
+  display: inline-block;
+}
+
+#contactHeader {
+  background-color: rgb(138, 188, 221);
 }
 
 /* -----------------Modal ----------------- */
 #modalStandin {
-    display: none;
-    z-index: 12;
+  display: none;
+  z-index: 12;
 }
 
 #modalStandin > * {
-    text-align: center;
+  text-align: center;
 }
 
 #modalStandin > p {
-    padding: 10px;
-    font-size: 20px;
-    width: 100%;
-    height: auto;
-
+  padding: 10px;
+  font-size: 20px;
+  width: 100%;
+  height: auto;
 }
 
 #modalStandin > h3 {
-    padding-top: 20px;
+  padding-top: 20px;
 }
 
 #modalBackground {
-    display: none;
-    position: static;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    z-index: 11;
+  display: none;
+  position: static;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 11;
 }
 
 .modalTitle {
-
 }
 
 #contactModal {
-    
 }
 
 .modalSubTitle {
-
 }
 
 /*----------------------------------Carousel--------------------------------------------------*/
 
 #carousel {
-    width: 100%;
-    height: 300px;
-    position: relative;
+  width: 100%;
+  height: 300px;
+  position: relative;
 }
 
 .carouselTextBox {
-    padding: 10px;
-    height: 100%;
+  padding: 10px;
+  height: 100%;
 }
 
 .carouselTextBox * {
-    grid-area: text;
-    display: block;
-    color: white;
+  grid-area: text;
+  display: block;
+  color: white;
 
-    /* text-shadow: 2px 0px 8px rgba(0, 0, 0, 0.4); */
+  /* text-shadow: 2px 0px 8px rgba(0, 0, 0, 0.4); */
 }
 
 .carouselTextBox h2 {
-    font-size: 4vw;
-    text-align: center;
+  font-size: 4vw;
+  text-align: center;
 }
 
 .carouselText {
 }
 
 .carouselView {
-    will-change: right;
-    top:0;
-    right:0;
-    height: 100%;
-    position: absolute;
-    width: 100%;
-    display: inline-block;
-    animation-duration: 500ms
+  will-change: right;
+  top: 0;
+  right: 0;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  display: inline-block;
+  animation-duration: 500ms;
 }
 
 .carouselButton {
-    z-index: 10;
-    position: absolute;
-    height: auto;
-    padding: 10px;
-    top: 50%;
+  z-index: 10;
+  position: absolute;
+  height: auto;
+  padding: 10px;
+  top: 50%;
 }
 
 #leftButton {
-    left: 10px;
+  left: 10px;
 }
 
 #rightButton {
-    right: 10px;
+  right: 10px;
 }
 
 .noDisplay {
-    display: none;
+  display: none;
 }
 
-.slideLeft, .slideRight, .slideFromRight, .slideFromLeft {
-    animation-fill-mode: forwards;
+.slideLeft,
+.slideRight,
+.slideFromRight,
+.slideFromLeft {
+  animation-fill-mode: forwards;
 }
 
 .slideLeft {
-    animation-direction: normal;
-    animation-name: slideLeft;
+  animation-direction: normal;
+  animation-name: slideLeft;
 }
 
 .slideRight {
-    animation-direction: normal;
-    animation-name: slideRight;
+  animation-direction: normal;
+  animation-name: slideRight;
 }
 
- /* --------------------------------Test--------------------------------------------------- */
+/* --------------------------------Test--------------------------------------------------- */
 #carouselShow1 {
-    background-color: green;
+  background-color: green;
 }
 
 #carouselShow2 {
-    background-color: brown;
+  background-color: brown;
 }
 
 #carouselShow3 {
-    background-color: pink;
+  background-color: pink;
 }
 
 #carouselShow4 {
-    background-color: blue;
+  background-color: blue;
 }
 
 #carouselShow5 {
-    background-color: black;
+  background-color: black;
 }
 /* -------------------------------------------------------------------------------------- */
- 
 
 /* -------------------------------------Animations--------------------------------------- */
 
 @keyframes slideRight {
-    from {right: 0%;}
-    to {right: -105%;}
+  from {
+    right: 0%;
+  }
+  to {
+    right: -105%;
+  }
 }
 
-@keyframes slideLeft{
-    from{right: 0%;}
-    to {right: 105%}
+@keyframes slideLeft {
+  from {
+    right: 0%;
+  }
+  to {
+    right: 105%;
+  }
 }
 
 @keyframes fadeNavButtons {
-    0% {
-        color: rgb(51, 65, 149);
-        text-shadow: 0px 0px 0px rgba(0,0,0,0.5);
-    }
-    100% {
-        color:white;
-        text-shadow:1px 1px 10px rgba(0,0,0,0.5);
-    }
+  0% {
+    color: rgb(51, 65, 149);
+    text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.5);
+  }
+  100% {
+    color: white;
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+  }
 }
 /* -------------------------------------------------------------------------------------- */
