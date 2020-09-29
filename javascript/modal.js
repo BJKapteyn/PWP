@@ -42,43 +42,44 @@ let contactModals = {
     ),
     modalZoneC: new contactModal (
         "Zone C",
-        "",
-        "",
-        "",
-        "",
+        "Delaware, Virginia",
+        "Loree Mara",
+        "800-637-7974",
+        "Single Parents of Hampton Roads #216",
         ""
     ),
     modalZoneD: new contactModal (
         "Zone D",
-        "",
-        "",
-        "",
-        "",
-        ""
+        "Michigan, Ohio, Indiana, Kentucky, West Virginia",
+        "Harriet West",
+        "800-637-7974",
+        "Ann Arbor #38; Flint #110; Val Porte #193; Marion #398; Single Parents Heart of the" +
+        " Bluegrass #434; Wabash County #734; CYA of Jefferson County #847; Loganland #1035.",
+        "hwest2236@gmail.com"
     ),
     modalZoneF: new contactModal (
         "Zone F",
-        "",
-        "",
-        "",
-        "",
-        ""
+        "Illinois, Missouri, Wisconsin, Minnesota, North Dakota, South Dakota, Nebraska",
+        "Pat Davidson",
+        "800-637-7974",
+        "Grand Island #164; Three Trails #505; Belleville #559",
+        "pat8018@hotmail.co"
     ),
     modalZoneH: new contactModal (
         "Zone H",
-        "",
-        "",
-        "",
-        "",
-        ""
+        "California, Oregon, Washington, Nevada and other Western states.)",
+        "SueEllen Hayes",
+        "800-637-7974",
+        "La Mirada #176; Emerald Empire #1102",
+        "sth0110@aol.com"
     ),
     modalZoneL: new contactModal (
         "Zone L",
-        "",
-        "",
-        "",
-        "",
-        ""
+        "(Covers North Carolina, South Carolina, Georgia, Florida, Alabama, Tennessee, Mississippi)",
+        "Elizabeth McEwen",
+        "800-637-7974",
+        "Greater Spartanburg #388; Shelby #555; South Suburban Atlanta #581; South West Miami #835",
+        "tcfm@twc.com"
     )
 }
 
@@ -103,7 +104,7 @@ function createModalElements(contactModal = new contactModal()) {
 
     phoneTitle.innerText = "Contact Number";
     phoneNumber.href = contactModal.contactSrc;
-    phoneNumber.innerText = phoneNumberBuilder(contactModal.contactPhone);
+    phoneNumber.innerText = contactModal.contactPhone;
 
     emailTitle.innerText = "Email:"
     email.innerText = contactModal.contactEmail;
@@ -154,15 +155,9 @@ window.onload = function() {
     modalElements.modalBackground.addEventListener("click", function() {
         hideModal();
     });
-    vectorZones = {
-        zoneB: document.getElementById("zoneB"),
-        zoneC: document.getElementById("zoneC"),
-        zoneD: document.getElementById("zoneD"),
-        zoneF: document.getElementById("zoneF"),
-        zoneH: document.getElementById("zoneH")
-    }
     vectorZones.zoneB.addEventListener("click", function(event) {
         event.preventDefault();
         showModal(contactModals.modalZoneB);
     })
+    vectorZones.zoneC.addEventListener("click")
 }
