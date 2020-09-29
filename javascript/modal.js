@@ -155,9 +155,6 @@ window.onload = function() {
     modalElements.modalBackground.addEventListener("click", function() {
         hideModal();
     });
-    vectorZones.zoneB.addEventListener("click", function(event) {
-        event.preventDefault();
-        showModal(contactModals.modalZoneB);
-    })
-    vectorZones.zoneC.addEventListener("click")
+    let zoneElements = Object.entries(vectorZones);
+    console.log(zoneElements[0]);
 }
