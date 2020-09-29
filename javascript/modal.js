@@ -10,14 +10,14 @@ function clearElement(parentElement = document.querySelector("")) {
 }
 
 //Each zone on the SVG map
-let vectorZones = {
-    zoneB: document.getElementById("zoneB"),
-    zoneC: document.getElementById("zoneC"),
-    zoneD: document.getElementById("zoneD"),
-    zoneF: document.getElementById("zoneF"),
-    zoneH: document.getElementById("zoneH"),
-    zoneL: document.getElementById("zoneL")
-}
+let vectorZones = [
+    document.getElementById("zoneB"),
+    document.getElementById("zoneC"),
+    document.getElementById("zoneD"),
+    document.getElementById("zoneF"),
+    document.getElementById("zoneH"),
+    document.getElementById("zoneL")
+]
 
 //contains info on what should go in the modal
 //enter number in 555-555-5555 format for phone number href purposes
@@ -31,8 +31,9 @@ function contactModal(zoneStr, zoneStatesStr, zonePresStr, phoneNumberStr = "555
     this.contactSrc = `tel:+${phoneNumberStr}`;
 }
 
-let contactModals = {
-    modalZoneB: new contactModal(
+//This needs to be in the same order as vectorZones to for onload to work
+let contactModalData = [
+    new contactModal(
         "Zone B",
         "New England area, New York, Pennsylvainia, Maryland",
         "Don Palermo",
@@ -40,7 +41,7 @@ let contactModals = {
         "Westchester #21; Delco #352; Greater Rochester #683; and Carroll County #935",
         "pwpdonp@yahoo.com"
     ),
-    modalZoneC: new contactModal (
+    new contactModal (
         "Zone C",
         "Delaware, Virginia",
         "Loree Mara",
@@ -48,7 +49,7 @@ let contactModals = {
         "Single Parents of Hampton Roads #216",
         ""
     ),
-    modalZoneD: new contactModal (
+    new contactModal (
         "Zone D",
         "Michigan, Ohio, Indiana, Kentucky, West Virginia",
         "Harriet West",
@@ -57,15 +58,15 @@ let contactModals = {
         " Bluegrass #434; Wabash County #734; CYA of Jefferson County #847; Loganland #1035.",
         "hwest2236@gmail.com"
     ),
-    modalZoneF: new contactModal (
+    new contactModal (
         "Zone F",
         "Illinois, Missouri, Wisconsin, Minnesota, North Dakota, South Dakota, Nebraska",
         "Pat Davidson",
         "800-637-7974",
         "Grand Island #164; Three Trails #505; Belleville #559",
-        "pat8018@hotmail.co"
+        "pat8018@hotmail.com"
     ),
-    modalZoneH: new contactModal (
+    new contactModal (
         "Zone H",
         "California, Oregon, Washington, Nevada and other Western states.)",
         "SueEllen Hayes",
@@ -73,15 +74,15 @@ let contactModals = {
         "La Mirada #176; Emerald Empire #1102",
         "sth0110@aol.com"
     ),
-    modalZoneL: new contactModal (
+    new contactModal (
         "Zone L",
-        "(Covers North Carolina, South Carolina, Georgia, Florida, Alabama, Tennessee, Mississippi)",
+        "North Carolina, South Carolina, Georgia, Florida, Alabama, Tennessee, Mississippi",
         "Elizabeth McEwen",
         "800-637-7974",
         "Greater Spartanburg #388; Shelby #555; South Suburban Atlanta #581; South West Miami #835",
         "tcfm@twc.com"
     )
-}
+    ]
 
 function createModalElements(contactModal = new contactModal()) {
     let zone = document.createElement("h2");
@@ -155,6 +156,12 @@ window.onload = function() {
     modalElements.modalBackground.addEventListener("click", function() {
         hideModal();
     });
-    let zoneElements = Object.entries(vectorZones);
-    console.log(zoneElements[0]);
+
+    //create and add functionality to map zones
+    debugger;
+    for(let i = 0; i < vectorZones.length; i++) {
+        vectorZones[i].addEventListener("click", function() {
+            showModal(contactModalData[i]);
+        });
+    }
 }
