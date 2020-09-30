@@ -68,7 +68,7 @@ let contactModalData = [
     ),
     new contactModal (
         "Zone H",
-        "California, Oregon, Washington, Nevada and other Western states.)",
+        "California, Oregon, Washington, Nevada, and other Western states",
         "SueEllen Hayes",
         "800-637-7974",
         "La Mirada #176; Emerald Empire #1102",
@@ -92,6 +92,7 @@ function createModalElements(contactModal = new contactModal()) {
     let zonePres = document.createElement("p");
     let phoneTitle = document.createElement("h3");
     let phoneNumber = document.createElement("a");
+    let phoneNumberText = document.createElement("p");
     let emailTitle = document.createElement("h3");
     let email = document.createElement("p");
     let modal = document.createElement("div");
@@ -105,7 +106,8 @@ function createModalElements(contactModal = new contactModal()) {
 
     phoneTitle.innerText = "Contact Number";
     phoneNumber.href = contactModal.contactSrc;
-    phoneNumber.innerText = contactModal.contactPhone;
+    phoneNumberText.innerText = contactModal.contactPhone;
+    phoneNumber.appendChild(phoneNumberText);
 
     emailTitle.innerText = "Email:"
     email.innerText = contactModal.contactEmail;
