@@ -160,7 +160,6 @@ window.onload = function() {
     });
 
     //create and add functionality to map zones
-    debugger;
     for(let i = 0; i < vectorZones.length; i++) {
         vectorZones[i].addEventListener("click", function() {
             showModal(contactModalData[i]);
