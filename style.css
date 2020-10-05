@@ -88,11 +88,11 @@ body {
 
 #headerLogo {
   position: absolute;
-  width: 9%;
-  left: 15%;
+  width: 25%;
+  left: 4%;
   opacity: 0.5;
   top: 50%;
-  margin-top: -4.2%;
+  margin-top: -13%;
 }
 /* SVG Logo */
 #PWP {
@@ -479,7 +479,12 @@ a.navButton {
 }
 
 #contactHeader {
+  height: 500px;
   background-color: rgb(138, 188, 221);
+  background-image: url("./pics/Hug.jpg");
+  background-size: 100%;
+  background-position: bottom;
+  background-repeat: no-repeat;
 }
 
 /* -----------------Modal ----------------- */
@@ -717,7 +722,11 @@ a.navButton {
 }
 
 /* -----------------------------------------------Media Queries------------------------------------ */
-
+@media only screen and (max-width: 1300px) {
+  #contactHeader {
+    height: 400px;
+  }
+}
 @media only screen and (max-width: 1000px) {
   p {
     font-size: 14px;
@@ -729,6 +738,10 @@ a.navButton {
 
   h3 {
     font-size: 20px;
+  }
+
+  #contactHeader {
+    height: 300px;
   }
 
   #contactTitle {
@@ -744,8 +757,9 @@ a.navButton {
   }
 
   #headerLogo {
-    width: 16%;
-    left: 5%;
+    margin: -9%;
+    width: 22%;
+    left: 13%;
     opacity: 0.3;
   }
 
@@ -779,18 +793,30 @@ a.navButton {
   }
 
   #carousel {
-    height: 200px;
+    height: 250px;
   }
 
 }
 
+@media only screen and (max-width: 800px) {
+
+}
+
 @media only screen and (max-width: 700px) {
+  #contactHeader {
+    height: 250px;
+  }
+
   #headerLogo {
     display: none;
   }
 }
 
 @media only screen and (max-width: 500px) {
+  #contactHeader {
+    background-image: none;
+    height: 140px;
+  }
   #contactTitle h1 {
     font-size: 30px;
   }
