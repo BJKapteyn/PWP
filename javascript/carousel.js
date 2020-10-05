@@ -9,8 +9,7 @@ let carouselElements = {
     carouselView1: document.getElementById('carouselShow1'),
     carouselView2: document.getElementById('carouselShow2'),
     carouselView3: document.getElementById('carouselShow3'),
-    carouselView4: document.getElementById('carouselShow4'),
-    carouselView5: document.getElementById('carouselShow5')
+    carouselView4: document.getElementById('carouselShow4')
 }
 
 //contains elements and views with incrementing function
