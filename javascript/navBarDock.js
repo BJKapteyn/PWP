@@ -35,5 +35,7 @@ function dockUnDock() {
 }
 
 window.onscroll = function() {
-    dockUnDock();
+    if(window.innerWidth > 1000) {
+        dockUnDock();
+    }
 }

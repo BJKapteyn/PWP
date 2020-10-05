@@ -431,8 +431,7 @@ a.navButton {
 
 /* -----------------------------------------Contact------------------------------------------ */
 
-#contactTitle {
-}
+
 
 .generalTitle {
   color: rgb(51, 65, 149);
@@ -473,6 +472,10 @@ a.navButton {
 
 #contactTitle > * {
   display: inline-block;
+}
+
+#contactTitle h1 {
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
 }
 
 #contactHeader {
@@ -716,6 +719,53 @@ a.navButton {
 /* -----------------------------------------------Media Queries------------------------------------ */
 
 @media only screen and (max-width: 1000px) {
+  p {
+    font-size: 14px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  #contactTitle {
+    padding-top: 50px;
+  }
+
+  #contactTitle h1 {
+    font-size: 45px;
+  }
+
+  #contactTitle h2 {
+    font-size: 30px;
+  }
+
+  #headerLogo {
+    width: 16%;
+    left: 5%;
+    opacity: 0.3;
+  }
+
+  #navContainer {
+    right: 50%;
+    color: white;
+  }
+
+  #navBar {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+  #navContainer a {
+    color: white;
+  }
+
+  #infoContainer {
+    width: 97%;
+  }
+
   #infoFlex {
     justify-content: space-around;
   }
@@ -727,4 +777,29 @@ a.navButton {
   .flexItem {
     max-width: 45%;
   }
+
+  #carousel {
+    height: 200px;
+  }
+
+}
+
+@media only screen and (max-width: 700px) {
+  #headerLogo {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  #contactTitle h1 {
+    font-size: 30px;
+  }
+
+  #contactTitle h2 {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+
 }

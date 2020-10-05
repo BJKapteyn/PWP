@@ -57,7 +57,7 @@ slideButtons.right.addEventListener('click', function(event) {
 
 //true is slide right false is slide left
 function slideCarousel(leftOrRight) {
-    //primethe z-index of the view to the 'left' and 'right' of the current view
+    //prime the z-index of the view to the 'left' and 'right' of the current view
     let currentView = carouselUtilities.carouselViews.item(carouselUtilities.currentViewIndex);
     currentView.style.zIndex = "3";
     
@@ -74,7 +74,6 @@ function slideCarousel(leftOrRight) {
     else {
         leftView.style.zIndex = "2";
         currentView.classList.add("slideRight");
-
     }
     setTimeout(function() {
         currentView.style.zIndex = "1";
