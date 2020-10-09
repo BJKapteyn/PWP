@@ -82,9 +82,14 @@ let contactModalData = [
         "Greater Spartanburg #388; Shelby #555; South Suburban Atlanta #581; South West Miami #835",
         "tcfm@twc.com"
     )
-    ]
+]
+
+function createNoZoneModal() {
+    
+}
 
 function createModalElements(contactModal = new contactModal()) {
+    let elements = [];
     let zone = document.createElement("h2");
     let zoneStatesTitle = document.createElement("h3");
     let zoneStates = document.createElement("p");
@@ -98,25 +103,35 @@ function createModalElements(contactModal = new contactModal()) {
     let modal = document.createElement("div");
     modal.id = "contactModal";
     
-    zone.innerText = contactModal.zone;
-    zoneStatesTitle.innerText = "States Covered:";
-    zoneStates.innerText = contactModal.zoneStates;
-    zonePresTitle.innerText = "Zone President";
-    zonePres.innerText = contactModal.zonePres;
+    if(contactModal.zone) {
+        zone.innerText = contactModal.zone;
+        elements.push(zone);
+    }
+    if(contactModal.zoneStates) {
+        zoneStatesTitle.innerText = "States Covered:";
+        zoneStates.innerText = contactModal.zoneStates;
+        elements.push(zoneStatesTitle, zoneStates);
+    }
+    if(contactModal.zonePres) {
+        zonePresTitle.innerText = "Zone President";
+        zonePres.innerText = contactModal.zonePres;
+        elements.push(zonePresTitle, zonePres);
+    }
+    if(contactModal.contactPhone) {
+        phoneTitle.innerText = "Contact Number";
+        phoneNumber.href = contactModal.contactSrc;
+        phoneNumberText.innerText = contactModal.contactPhone;
+        phoneNumber.appendChild(phoneNumberText);
+        elements.push(phoneTitle, phoneNumber);
 
-    phoneTitle.innerText = "Contact Number";
-    phoneNumber.href = contactModal.contactSrc;
-    phoneNumberText.innerText = contactModal.contactPhone;
-    phoneNumber.appendChild(phoneNumberText);
-
-    emailTitle.innerText = "Email:"
-    email.innerText = contactModal.contactEmail;
-    // title.className = "modalTitle";
-    // zoneStatesTitle.className = "modalSubtitle";
-    // phoneTitle.className = "modalSubtitle";
+    }
+    if(contactModal.contactEmail) {
+        emailTitle.innerText = "Email:"
+        email.innerText = contactModal.contactEmail;
+        elements.push(emailTitle, email);
+    }
     
     //order matters as they will be displayed on page in order
-    let elements = [zone, zoneStatesTitle, zoneStates, zonePresTitle, zonePres, phoneTitle, phoneNumber,  emailTitle, email];
     for(let i = 0; i < elements.length; i++) {
         modal.appendChild(elements[i]);
     }

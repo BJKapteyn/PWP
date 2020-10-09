@@ -183,7 +183,7 @@ footer * {
 
 footer {
   display: grid;
-  grid-template: "left center right" 100% / 1fr 1fr 1fr;
+  grid-template: "left center right" 100% / 1fr 50% 1fr;
   background: linear-gradient(0deg, #8abcdd, rgba(255, 255, 255, 1) 100%);
   height: 200px;
   width: 100%;
@@ -204,6 +204,11 @@ footer {
   font-size: 20px;
 }
 
+#footerTitle p, #footerTitle a {
+  font-size: 20px;
+  margin: 5px;
+}
+
 #attributions {
   grid-area: right;
 }
@@ -219,7 +224,7 @@ nav {
   position: fixed;
   right: 0px;
   top: 0px;
-  height: 50px;
+  height: 60px;
   width: 100%;
 }
 
@@ -482,7 +487,6 @@ a.navButton {
   position:relative;
   z-index: 9;
   overflow: auto;
-  min-height: 800px;
   background: linear-gradient(180deg, #8abcdd, rgba(255, 255, 255, 1) 100%);
 }
 
@@ -493,7 +497,7 @@ a.navButton {
 .generalContainer {
   width: 90%;
   overflow: auto;
-  min-height: 500px;
+  /* min-height: 500px; */
   background: white;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   margin: 20px auto;
@@ -518,7 +522,12 @@ a.navButton {
   text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
 }
 
+#contactTitle {
+  margin-top: 5%;
+}
+
 #contactHeader {
+  overflow: auto;
   height: 500px;
   background-color: rgb(138, 188, 221);
   background-image: url("./pics/Hug.jpg");
@@ -766,6 +775,10 @@ a.navButton {
   #contactHeader {
     height: 400px;
   }
+
+  a.navButton {
+    font-size: 25px;
+  }
 }
 @media only screen and (max-width: 1000px) {
   p {
@@ -863,6 +876,14 @@ a.navButton {
 }
 
 @media only screen and (max-width: 700px) {
+  nav {
+    height: 48px;
+  }
+
+  a.navButton {
+    font-size: 20px;
+  }
+  
   #siteTitle {
     padding-bottom: 16%;
   }
@@ -901,13 +922,34 @@ a.navButton {
   }
 
   #indexBodyContainer > div#about, #indexBodyContainer > div#infoFlex {
-    width: 100%;
+    width: 98%;
+  }
+
+  #footerTitle > h1 {
+    font-size: 20px;
+  }
+  
+  #footerTitle > h2 {
+    font-size: 15px;
+  }
+  
+  #footerTitle p, #footerTitle a {
+    font-size: 15px;
+    margin: 5px;
   }
 }
 
 @media only screen and (max-width: 600px) {
   h1 {
     font-size: 25px;
+  }
+  
+  h2 {
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 15px;
   }
   
   #pageSplit {
@@ -918,6 +960,10 @@ a.navButton {
   #pageSplit > p {
     top: 40%;
     width: 35%;
+  }
+
+  .generalContainer {
+    width: 98%;
   }
 }
 
@@ -936,6 +982,15 @@ a.navButton {
 
   #contactTitle h2 {
     font-size: 20px;
+  }
+
+  footer {
+    grid-template: "center" 100%/100%;
+    height: 150%;
+  }
+
+  #footerLogo {
+    display: none;
   }
 }
 
