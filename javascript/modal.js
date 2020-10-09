@@ -16,7 +16,8 @@ let vectorZones = [
     document.getElementById("zoneD"),
     document.getElementById("zoneF"),
     document.getElementById("zoneH"),
-    document.getElementById("zoneL")
+    document.getElementById("zoneL"),
+    document.getElementById("noZone")
 ]
 
 //contains info on what should go in the modal
@@ -31,7 +32,7 @@ function contactModal(zoneStr, zoneStatesStr, zonePresStr, phoneNumberStr = "555
     this.contactSrc = `tel:+${phoneNumberStr}`;
 }
 
-//This needs to be in the same order as vectorZones to for onload to work
+//This needs to be in the same order and number as vectorZones to for initialization
 let contactModalData = [
     new contactModal(
         "Zone B",
@@ -81,51 +82,59 @@ let contactModalData = [
         "800-637-7974",
         "Greater Spartanburg #388; Shelby #555; South Suburban Atlanta #581; South West Miami #835",
         "tcfm@twc.com"
+    ),
+    new contactModal (
+        "No Chapters Established",
+        "Alaska, Arkansas, Hawaii, Louisiana, Oklahoma, Texas",
+        "",
+        "800-637-7974",
+        "Call the main number to find a chapter near you.",
+        ""
+
     )
 ]
 
 function createNoZoneModal() {
-    
+
 }
 
 function createModalElements(contactModal = new contactModal()) {
     let elements = [];
-    let zone = document.createElement("h2");
-    let zoneStatesTitle = document.createElement("h3");
-    let zoneStates = document.createElement("p");
-    let zonePresTitle = document.createElement("h3");
-    let zonePres = document.createElement("p");
-    let phoneTitle = document.createElement("h3");
-    let phoneNumber = document.createElement("a");
-    let phoneNumberText = document.createElement("p");
-    let emailTitle = document.createElement("h3");
-    let email = document.createElement("p");
     let modal = document.createElement("div");
     modal.id = "contactModal";
     
     if(contactModal.zone) {
+        let zone = document.createElement("h2");
         zone.innerText = contactModal.zone;
         elements.push(zone);
     }
     if(contactModal.zoneStates) {
+        let zoneStatesTitle = document.createElement("h3");
+        let zoneStates = document.createElement("p");
         zoneStatesTitle.innerText = "States Covered:";
         zoneStates.innerText = contactModal.zoneStates;
         elements.push(zoneStatesTitle, zoneStates);
     }
     if(contactModal.zonePres) {
+        let zonePresTitle = document.createElement("h3");
+        let zonePres = document.createElement("p");
         zonePresTitle.innerText = "Zone President";
         zonePres.innerText = contactModal.zonePres;
         elements.push(zonePresTitle, zonePres);
     }
     if(contactModal.contactPhone) {
+        let phoneTitle = document.createElement("h3");
+        let phoneNumber = document.createElement("a");
+        let phoneNumberText = document.createElement("p");
         phoneTitle.innerText = "Contact Number";
         phoneNumber.href = contactModal.contactSrc;
         phoneNumberText.innerText = contactModal.contactPhone;
         phoneNumber.appendChild(phoneNumberText);
         elements.push(phoneTitle, phoneNumber);
-
     }
     if(contactModal.contactEmail) {
+        let emailTitle = document.createElement("h3");
+        let email = document.createElement("p");
         emailTitle.innerText = "Email:"
         email.innerText = contactModal.contactEmail;
         elements.push(emailTitle, email);

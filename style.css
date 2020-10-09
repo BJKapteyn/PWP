@@ -221,6 +221,7 @@ footer {
 /*----------------------------------Nav-------------------------------------------------------*/
 
 nav {
+  z-index: 20;
   position: fixed;
   right: 0px;
   top: 0px;
@@ -846,7 +847,7 @@ a.navButton {
   }
 
   #carousel {
-    height: 250px;
+    height: 300px;
   }
 
   #aboutImg {
@@ -965,6 +966,11 @@ a.navButton {
   .generalContainer {
     width: 98%;
   }
+
+  #contactModal {
+    width: 400px;
+    margin-left: -200px;
+  }
 }
 
 @media only screen and (max-width: 500px) {
@@ -982,6 +988,11 @@ a.navButton {
 
   #contactTitle h2 {
     font-size: 20px;
+  }
+
+  #contactModal {
+    width: 300px;
+    margin-left: -150px;
   }
 
   footer {
