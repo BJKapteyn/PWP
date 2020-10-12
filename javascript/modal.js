@@ -22,14 +22,14 @@ let vectorZones = [
 
 //contains info on what should go in the modal
 //enter number in 555-555-5555 format for phone number href purposes
-function contactModal(zoneStr, zoneStatesStr, zonePresStr, phoneNumberStr = "555-555-5555", zoneChaptersStr, contactEmailStr) {
+function contactModal(zoneStr, zoneStatesStr, zonePresStr, phoneNumberStr = "", zoneChaptersStr, contactEmailStr) {
     this.zone = zoneStr;
     this.zoneStates = zoneStatesStr;
     this.zonePres = zonePresStr;
-    this.contactPhone = phoneNumberBuilder(phoneNumberStr);
+    this.contactPhone = phoneNumberStr ? phoneNumberBuilder(phoneNumberStr) : "";
     this.zoneChapters = zoneChaptersStr;
     this.contactEmail = contactEmailStr;
-    this.contactSrc = `tel:+${phoneNumberStr}`;
+    this.contactSrc = phoneNumberStr? `tel:+${phoneNumberStr}` : "";
 }
 
 //This needs to be in the same order and number as vectorZones to for initialization
@@ -46,9 +46,9 @@ let contactModalData = [
         "Zone C",
         "Delaware, Virginia",
         "Loree Mara",
-        "800-637-7974",
+        "",
         "Single Parents of Hampton Roads #216",
-        ""
+        "PWPZoneC@yahoo.com"
     ),
     new contactModal (
         "Zone D",

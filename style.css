@@ -78,13 +78,8 @@ p {
 body {
   padding: 0px;
   margin: 0px;
-  min-height: 800px;
   font-family: "Arial Black", Gadget, sans-serif;
 }
-
-
-
-
 /* map SVG */
 .zone path,
 .zone rect,
@@ -859,6 +854,10 @@ a.navButton {
 @media only screen and (max-width: 800px) {
   #siteTitle > h1 {
     font-size: 45px;
+  }
+
+  #carousel p {
+    font-size: 14;
   }
 
 
