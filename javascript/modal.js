@@ -81,7 +81,7 @@ let contactModalData = [
         "Elizabeth McEwen",
         "800-637-7974",
         "Greater Spartanburg #388; Shelby #555; South Suburban Atlanta #581; South West Miami #835",
-        "tcfm@twc.com"
+        "tefm@twc.com"
     ),
     new contactModal (
         "No Chapters Established",
