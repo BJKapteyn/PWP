@@ -61,7 +61,7 @@ let contactModalData = [
     ),
     new contactModal (
         "Zone F",
-        "Illinois, Missouri, Wisconsin, Minnesota, North Dakota, South Dakota, Nebraska",
+        "Illinois, Missouri, Wisconsin, Minnesota, North Dakota, South Dakota, Nebraska, Kansas",
         "Pat Davidson",
         "800-637-7974",
         "Grand Island #164; Three Trails #505; Belleville #559",
