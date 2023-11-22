@@ -94,10 +94,6 @@ let contactModalData = [
     )
 ]
 
-function createNoZoneModal() {
-
-}
-
 function createModalElements(contactModal = new contactModal()) {
     let elements = [];
     let modal = document.createElement("div");
